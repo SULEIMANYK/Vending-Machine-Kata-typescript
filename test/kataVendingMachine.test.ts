@@ -177,16 +177,34 @@ describe("The vending machine KATA", () => {
         expect(machine.nextMessage).toBe("$0.60");
       });
     });
-    // test exact change only no change in machine  to return
   });
 
   describe("exact change only", () => {
+
     beforeEach(() => {
-      machine = new kataVendingMachine(10, 10, 10);
+      machine = new kataVendingMachine(10, 10, 10 );
       machine.exactChangeOnly();
     });
     it("should display EXACT CHANGE ONLY when exact change only", () => {
       expect(machine.nextMessage).toEqual("EXACT CHANGE ONLY");
+    });
+
+  
+  });
+  describe("exact change only", () => {
+    let money = [NICKEL, DIME, QUARTER];
+    for (let i = 0; i < 200; i++) {
+      let random = Math.floor(Math.random() * money.length);
+      money.push(money[random]);
+    }
+ 
+
+    beforeEach(() => {
+      machine = new kataVendingMachine(10, 10, 10 , money );
+      machine.exactChangeOnly();
+    });
+    it("should display INSERT COIN", () => {
+      expect(machine.nextMessage).toEqual("INSERT COIN");
     });
   });
 });
