@@ -1,15 +1,13 @@
 {
   "name": "kata",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-
+  "description": "kata vending machine",
   "scripts": {
     "build": "tsc",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [ "kata vending machine","kata", "vending" , "machine" ,"typescript"],
+  "author": "soulayman yaakoubi",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.2",
